@@ -1,0 +1,20 @@
+name: Blog
+description: 'Provide Blog content type and related configuration. Use <em>blog</em> for personal or journal-like posts.'
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - drutopia_blog
+  - drutopia_comment
+  - drutopia_core
+  - drutopia_site
+  - field
+  - image
+  - menu_ui
+  - node
+  - path
+  - system
+  - text
+  - user
+  - views
+package: Drutopia
