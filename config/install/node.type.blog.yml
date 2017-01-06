@@ -14,6 +14,6 @@ name: Blog
 type: blog
 description: 'Use <em>blog</em> for personal or journal-like posts.'
 help: ''
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: true
