@@ -2,19 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.full
     - field.field.node.blog.body
     - field.field.node.blog.comment
     - field.field.node.blog.field_body_paragraph
     - field.field.node.blog.field_image
     - field.field.node.blog.field_summary
     - field.field.node.blog.field_tags
-    - image.style.small_square
+    - image.style.large
     - node.type.blog
   module:
+    - comment
     - ds
+    - entity_reference_revisions
     - image
-    - text
     - user
 third_party_settings:
   ds:
@@ -35,45 +37,58 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - field_image
         - node_title
-        - field_summary
+        - field_image
+        - field_body_paragraph
+        - field_tags
         - links
+        - comment
     fields:
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 0
         label: hidden
         formatter: default
-        settings:
-          link: true
-          wrapper: h2
-          class: ''
-id: node.blog.teaser
+id: node.blog.full
 targetEntityType: node
 bundle: blog
-mode: teaser
+mode: full
 content:
-  field_image:
-    type: image
-    weight: 0
-    label: hidden
+  comment:
+    weight: 5
+    label: above
     settings:
-      image_style: small_square
-      image_link: content
+      pager_id: 0
+      view_mode: default
     third_party_settings: {  }
-  field_summary:
-    type: text_default
+    type: comment_default
+  field_body_paragraph:
     weight: 2
     label: hidden
-    settings: {  }
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-  links:
+    type: entity_reference_revisions_entity_view
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_tags:
     weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 4
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
-  comment: true
-  field_body_paragraph: true
-  field_tags: true
+  field_summary: true

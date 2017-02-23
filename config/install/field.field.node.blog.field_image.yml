@@ -6,8 +6,6 @@ dependencies:
     - node.type.blog
   module:
     - image
-_core:
-  default_config_hash: KPa9MXneq-CbAUQ62RWaehWwyDzjxtYbcSFrY5m6wNQ
 id: node.blog.field_image
 field_name: field_image
 entity_type: node

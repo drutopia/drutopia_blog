@@ -8,12 +8,10 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-_core:
-  default_config_hash: 2tOuWCHTBNQL6qHpVU0Fp4sBGevWZAkXhAaPBu3HyN8
 name: Blog
 type: blog
 description: 'Use <em>blog</em> for personal or journal-like posts.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: true
