@@ -14,7 +14,6 @@ dependencies:
   - menu_ui
   - node
   - paragraphs
-  - paragraphs_base_terms
   - path
   - system
   - text
