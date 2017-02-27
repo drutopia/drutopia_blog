@@ -36,10 +36,16 @@ third_party_settings:
     regions:
       ds_content:
         - field_image
+        - node_post_date
         - node_title
         - field_summary
         - links
     fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 0
+        label: hidden
+        formatter: ds_post_date_long
       node_title:
         plugin_id: node_title
         weight: 1
