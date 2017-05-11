@@ -68,16 +68,19 @@ content:
       image_style: small_square
       image_link: content
     third_party_settings: {  }
+    region: ds_content
   field_summary:
     type: text_default
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: ds_content
   links:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: ds_content
 hidden:
   body: true
   comment: true

@@ -1,8 +1,14 @@
 {
-    "name": "drupal/drutopia_blog",
-    "description": "Drutopia blog is a base feature providing an blog content type and related configuration.",
-    "type": "drupal-module",
-    "license": "GPL-2.0+",
-    "homepage": "https://gitlab.com/drutopia/drutopia_blog",
-    "minimum-stability": "dev"
+  "name": "drupal/drutopia_blog",
+  "description": "Drutopia Blog is a base feature providing a blog content type and related configuration.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "homepage": "https://gitlab.com/drutopia/drutopia_blog",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/ctools": "^3.0",
+    "drupal/ds": "^3.0-rc1",
+    "drupal/pathauto": "^1.0",
+    "drupal/token": "^1.0"
+  }
 }
