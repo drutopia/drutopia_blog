@@ -20,8 +20,7 @@ third_party_settings:
   ds:
     layout:
       id: ds_1col
-      path: modules/contrib/ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -39,16 +38,15 @@ third_party_settings:
         - node_post_date
         - node_title
         - field_summary
-        - links
     fields:
       node_post_date:
         plugin_id: node_post_date
-        weight: 0
+        weight: 1
         label: hidden
-        formatter: ds_post_date_long
+        formatter: ds_post_date_month_day_year
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 2
         label: hidden
         formatter: default
         settings:
@@ -71,13 +69,8 @@ content:
     region: ds_content
   field_summary:
     type: text_default
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    region: ds_content
-  links:
     weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     region: ds_content
@@ -86,3 +79,4 @@ hidden:
   comment: true
   field_body_paragraph: true
   field_tags: true
+  links: true
