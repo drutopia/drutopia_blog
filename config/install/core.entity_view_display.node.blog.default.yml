@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.blog.body
     - field.field.node.blog.comment
+    - field.field.node.blog.field_authors
     - field.field.node.blog.field_body_paragraph
     - field.field.node.blog.field_image
     - field.field.node.blog.field_summary
@@ -16,8 +17,7 @@ third_party_settings:
   ds:
     layout:
       id: ds_1col
-      path: modules/contrib/ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -38,6 +38,7 @@ content: {  }
 hidden:
   body: true
   comment: true
+  field_authors: true
   field_body_paragraph: true
   field_image: true
   field_summary: true

@@ -6,6 +6,7 @@ dependencies:
   - comment
   - drutopia_comment
   - drutopia_core
+  - drutopia_people
   - drutopia_site
   - ds
   - entity_reference_revisions
