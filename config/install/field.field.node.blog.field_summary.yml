@@ -11,7 +11,7 @@ field_name: field_summary
 entity_type: node
 bundle: blog
 label: Summary
-description: ''
+description: 'Enter a short description of what this blog post is about. The summary is displayed on blog teasers, such as on the blog listing page. '
 required: false
 translatable: true
 default_value: {  }
