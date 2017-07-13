@@ -1,0 +1,16 @@
+path:
+  - permissions
+plugin: add
+actions:
+  'create blog content':
+    value: 'create blog content'
+  'delete blog revisions':
+    value: 'delete blog revisions'
+  'delete any blog content':
+    value: 'delete any blog content'
+  'edit any blog content':
+    value: 'edit any blog content'
+  'revert blog revisions':
+    value: 'revert blog revisions'
+  'view blog revisions':
+    value: 'view blog revisions'
