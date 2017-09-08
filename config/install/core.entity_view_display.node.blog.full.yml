@@ -11,24 +11,28 @@ dependencies:
     - field.field.node.blog.field_image
     - field.field.node.blog.field_summary
     - field.field.node.blog.field_tags
-    - image.style.large
     - node.type.blog
+    - responsive_image.styles.wide
   module:
     - comment
     - ds
     - entity_reference_revisions
-    - image
+    - responsive_image
     - user
 third_party_settings:
   ds:
     layout:
-      id: ds_1col
-      library: null
-      disable_css: false
+      id: ds_3col_stacked
+      library: ds/ds_3col_stacked
+      disable_css: true
       entity_classes: all_classes
       settings:
         wrappers:
-          ds_content: div
+          header: div
+          left: div
+          middle: div
+          right: div
+          footer: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -36,20 +40,27 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
-      ds_content:
-        - node_post_date
-        - field_authors
+      header:
         - field_image
+      left:
+        - field_authors
+      middle:
+        - node_post_date
         - field_body_paragraph
         - field_tags
-        - links
+        - node_links
         - comment
     fields:
       node_post_date:
         plugin_id: node_post_date
-        weight: 0
+        weight: 2
         label: hidden
         formatter: ds_post_date_month_day_year
+      node_links:
+        plugin_id: node_links
+        weight: 5
+        label: hidden
+        formatter: default
 id: node.blog.full
 targetEntityType: node
 bundle: blog
@@ -63,46 +74,44 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: comment_default
-    region: ds_content
+    region: middle
   field_authors:
     type: entity_reference_label
     weight: 1
-    region: ds_content
-    label: hidden
+    region: left
+    label: visually_hidden
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
   field_body_paragraph:
     weight: 3
-    label: hidden
+    label: visually_hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
-    region: ds_content
+    region: middle
   field_image:
-    weight: 2
-    label: hidden
+    weight: 0
+    label: visually_hidden
     settings:
-      image_style: large
+      responsive_image_style: wide
       image_link: ''
     third_party_settings: {  }
-    type: image
-    region: ds_content
+    type: responsive_image
+    region: header
   field_tags:
     weight: 4
-    label: hidden
+    label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: ds_content
-  links:
-    weight: 5
-    region: ds_content
-    settings: {  }
-    third_party_settings: {  }
+    region: middle
 hidden:
   body: true
   field_summary: true
+  links: true

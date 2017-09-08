@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.card
     - field.field.node.blog.body
     - field.field.node.blog.comment
     - field.field.node.blog.field_authors
@@ -14,20 +14,20 @@ dependencies:
     - responsive_image.styles.narrow
   module:
     - ds
+    - field_group
     - responsive_image
     - text
     - user
 third_party_settings:
   ds:
     layout:
-      id: ds_2col
-      library: ds/ds_2col
+      id: ds_1col
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
         wrappers:
-          left: div
-          right: div
+          ds_content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -35,38 +35,52 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
-      left:
+      ds_content:
         - field_image
-      right:
-        - node_post_date
+        - group_card_content
         - node_title
         - field_authors
         - field_summary
         - field_tags
     fields:
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 1
-        label: hidden
-        formatter: ds_post_date_month_day_year
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
         settings:
           link: true
           wrapper: h2
           class: ''
-id: node.blog.teaser
+  field_group:
+    group_card_content:
+      children:
+        - node_title
+        - field_authors
+        - field_summary
+        - field_tags
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Card content'
+id: node.blog.card
 targetEntityType: node
 bundle: blog
-mode: teaser
+mode: card
 content:
   field_authors:
     type: entity_reference_label
-    weight: 3
-    region: right
+    weight: 4
+    region: ds_content
     label: visually_hidden
     settings:
       link: true
@@ -74,23 +88,23 @@ content:
   field_image:
     type: responsive_image
     weight: 0
+    region: ds_content
     label: visually_hidden
     settings:
       responsive_image_style: narrow
       image_link: content
     third_party_settings: {  }
-    region: left
   field_summary:
     type: text_default
-    weight: 4
+    weight: 5
+    region: ds_content
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    region: right
   field_tags:
     type: entity_reference_label
-    weight: 5
-    region: right
+    weight: 6
+    region: ds_content
     label: visually_hidden
     settings:
       link: true

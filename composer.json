@@ -9,6 +9,7 @@
     "drupal/config_actions": "^1.0-beta1",
     "drupal/ctools": "^3.0",
     "drupal/ds": "^3.0-rc1",
+    "drupal/field_group": "^3.0-dev",
     "drupal/pathauto": "^1.0",
     "drupal/token": "^1.0"
   }
