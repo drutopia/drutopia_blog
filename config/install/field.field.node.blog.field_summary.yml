@@ -12,7 +12,7 @@ entity_type: node
 bundle: blog
 label: Summary
 description: 'Enter a short description of what this blog post is about. The summary is displayed on blog teasers, such as on the blog listing page. '
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
