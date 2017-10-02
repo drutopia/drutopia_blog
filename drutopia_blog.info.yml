@@ -15,6 +15,7 @@ dependencies:
   - field_group
   - image
   - menu_ui
+  - metatag
   - node
   - paragraphs
   - path
