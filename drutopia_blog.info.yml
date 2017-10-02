@@ -8,6 +8,7 @@ dependencies:
   - drutopia_comment
   - drutopia_core
   - drutopia_people
+  - drutopia_seo
   - drutopia_site
   - ds
   - entity_reference_revisions
@@ -15,6 +16,7 @@ dependencies:
   - field_group
   - image
   - menu_ui
+  - metatag
   - node
   - paragraphs
   - path
