@@ -109,13 +109,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| Drutopia Octavia"
-            }
-        }
-    ],
     "field_text": [
         {
             "value": "<p>Blog posts can be a valuable way for a variety of authors to post reflections, experiences and opinions.<\/p>\r\n\r\n<p>At a minimum every blog post should have an image (which will be associated with the blog and display in different sizes in different displays), a summary field and a text paragraph in the body field.<\/p>\r\n\r\n<p>All Drutopia content types are built using the Paragraphs module which lets you add a variety of types of content and arrange them in the order you wish. When creating a blog post you can add standard text paragraphs in the body paragraph field, but also add images or files (such as a PDF).<\/p>\r\n",
