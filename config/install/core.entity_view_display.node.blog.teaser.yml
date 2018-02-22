@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.blog.field_authors
     - field.field.node.blog.field_body_paragraph
     - field.field.node.blog.field_image
+    - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_summary
     - field.field.node.blog.field_tags
     - node.type.blog
@@ -99,4 +100,5 @@ hidden:
   body: true
   comment: true
   field_body_paragraph: true
+  field_meta_tags: true
   links: true
