@@ -22,6 +22,7 @@ dependencies:
   - path
   - pathauto
   - responsive_image
+  - search_api
   - system
   - text
   - user
