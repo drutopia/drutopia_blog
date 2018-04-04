@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_summary
     - field.field.node.blog.field_tags
+    - field.field.node.blog.field_topics
     - node.type.blog
   module:
     - ds
@@ -45,4 +46,5 @@ hidden:
   field_meta_tags: true
   field_summary: true
   field_tags: true
+  field_topics: true
   links: true

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_summary
     - field.field.node.blog.field_tags
+    - field.field.node.blog.field_topics
     - node.type.blog
   module:
     - ds
@@ -39,6 +40,7 @@ third_party_settings:
         - field_authors
         - node_post_date
         - field_body_paragraph
+        - field_topics
         - field_tags
     fields:
       node_post_date:
@@ -81,7 +83,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_label
-    weight: 4
+    weight: 5
     region: ds_content
     label: hidden
     settings:
@@ -89,6 +91,14 @@ content:
     third_party_settings:
       ds:
         ds_limit: ''
+  field_topics:
+    type: entity_reference_label
+    weight: 4
+    region: ds_content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
 hidden:
   body: true
   comment: true
