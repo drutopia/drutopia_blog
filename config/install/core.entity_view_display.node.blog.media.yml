@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_summary
     - field.field.node.blog.field_tags
+    - field.field.node.blog.field_topics
     - image.style.square_thumbnail
     - node.type.blog
   module:
@@ -40,7 +41,7 @@ third_party_settings:
         - group_media_content
         - field_image
         - node_title
-        - field_tags
+        - field_topics
     fields:
       node_title:
         plugin_id: node_title
@@ -68,10 +69,11 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Media left'
+      region: hidden
     group_media_content:
       children:
         - node_title
-        - field_tags
+        - field_topics
       parent_name: ''
       weight: 1
       format_type: html_element
@@ -86,6 +88,7 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Media content'
+      region: hidden
 id: node.blog.media
 targetEntityType: node
 bundle: blog
@@ -100,7 +103,7 @@ content:
       image_style: square_thumbnail
       image_link: content
     third_party_settings: {  }
-  field_tags:
+  field_topics:
     type: entity_reference_label
     weight: 3
     region: ds_content
@@ -115,4 +118,5 @@ hidden:
   field_body_paragraph: true
   field_meta_tags: true
   field_summary: true
+  field_tags: true
   links: true
