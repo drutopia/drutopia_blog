@@ -106,7 +106,10 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
+  rendered_item: {  }
   add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
   tokenizer:
     all_fields: false
     fields:
@@ -119,7 +122,6 @@ processor_settings:
     weights:
       preprocess_index: -44
       preprocess_query: -46
-  aggregated_field: {  }
   stopwords:
     all_fields: false
     fields:
@@ -165,11 +167,6 @@ processor_settings:
     weights:
       preprocess_index: -48
       preprocess_query: -50
-  rendered_item: {  }
-  entity_status: {  }
-  content_access:
-    weights:
-      preprocess_query: -45
   ignorecase:
     all_fields: false
     fields:
@@ -190,6 +187,9 @@ processor_settings:
     weights:
       preprocess_index: -47
       preprocess_query: -48
+  content_access:
+    weights:
+      preprocess_query: -45
   html_filter:
     all_fields: false
     fields:
