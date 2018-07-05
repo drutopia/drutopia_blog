@@ -6,9 +6,9 @@ dependencies:
     - views.view.blog
   module:
     - search_api
-id: blog_topic
+id: blog_topics
 name: 'Blog Topics'
-url_alias: blog_topic
+url_alias: blog_topics
 weight: 0
 min_count: 1
 show_only_one_result: false

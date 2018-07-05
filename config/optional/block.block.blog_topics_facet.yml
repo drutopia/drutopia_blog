@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_visibility_groups.block_visibility_group.blog_listing
-    - facets.facet.blog_topic
+    - facets.facet.blog_topics
   module:
     - block_visibility_groups
     - facets
@@ -15,9 +15,9 @@ theme: octavia
 region: sidebar_first
 weight: 0
 provider: null
-plugin: 'facet_block:blog_topic'
+plugin: 'facet_block:blog_topics'
 settings:
-  id: 'facet_block:blog_topic'
+  id: 'facet_block:blog_topics'
   label: Topics
   provider: facets
   label_display: visible
