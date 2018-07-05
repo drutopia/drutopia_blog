@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_tags
     - field.storage.node.field_summary
+    - field.storage.node.field_topics
     - search_api.server.database
     - core.entity_view_mode.node.search_index
   module:
@@ -96,6 +97,14 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: promote
     type: boolean
+  field_topics:
+    label: Topics
+    datasource_id: 'entity:node'
+    property_path: field_topics
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_topics
 datasource_settings:
   'entity:node':
     bundles:
@@ -106,7 +115,10 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
+  rendered_item: {  }
   add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
   tokenizer:
     all_fields: false
     fields:
@@ -119,7 +131,6 @@ processor_settings:
     weights:
       preprocess_index: -44
       preprocess_query: -46
-  aggregated_field: {  }
   stopwords:
     all_fields: false
     fields:
@@ -165,11 +176,6 @@ processor_settings:
     weights:
       preprocess_index: -48
       preprocess_query: -50
-  rendered_item: {  }
-  entity_status: {  }
-  content_access:
-    weights:
-      preprocess_query: -45
   ignorecase:
     all_fields: false
     fields:
@@ -190,6 +196,9 @@ processor_settings:
     weights:
       preprocess_index: -47
       preprocess_query: -48
+  content_access:
+    weights:
+      preprocess_query: -45
   html_filter:
     all_fields: false
     fields:

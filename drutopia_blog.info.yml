@@ -3,6 +3,8 @@ description: 'Provide Blog content type and related configuration. Use <em>blog<
 type: module
 core: 8.x
 dependencies:
+  - block
+  - block_visibility_groups
   - comment
   - config_actions
   - drutopia_comment
@@ -12,6 +14,7 @@ dependencies:
   - drutopia_site
   - ds
   - entity_reference_revisions
+  - facets
   - field
   - field_group
   - image
