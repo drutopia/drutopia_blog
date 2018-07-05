@@ -3,6 +3,7 @@ description: 'Provide Blog content type and related configuration. Use <em>blog<
 type: module
 core: 8.x
 dependencies:
+  - block
   - block_visibility_groups
   - comment
   - config_actions
