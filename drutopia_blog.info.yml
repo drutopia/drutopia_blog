@@ -12,6 +12,7 @@ dependencies:
   - drutopia_site
   - ds
   - entity_reference_revisions
+  - facets
   - field
   - field_group
   - image
